@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teaching Philosophy - Elvis Kodie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f7f9fc;
+      color: #222;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      flex-direction: column;
+    }
+
+    .top-header-bar {
+      background-color: #004080;
+      color: white;
+      padding: 16px;
+      text-align: center;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+
+    .top-header-bar span {
+      display: inline-block;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: transform 0.3s ease;
+    }
+
+    .top-header-bar:hover span {
+      transform: scale(1.2);
+    }
+
+    .main-section {
+      display: flex;
+    }
+
+    .sidebar {
+      width: 220px;
+      background: #e6eef8;
+      padding: 30px 20px;
+      border-right: 2px solid #cddcec;
+      height: 100vh;
+      overflow-y: auto;
+      position: sticky;
+      top: 0;
+    }
+
+    .sidebar h3 {
+      margin-bottom: 10px;
+      color: #003366;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 8px 14px;
+      margin: 4px 0;
+      background-color: #f0f8ff;
+      color: #003366;
+      text-decoration: none;
+      border-left: 4px solid transparent;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.3s ease;
+      font-size: 14px;
+    }
+
+    .sidebar a:hover {
+      background-color: #d6eaff;
+      border-left: 4px solid #003366;
+      color: #002855;
+    }
+
+    .content {
+      flex: 1;
+      padding: 30px;
+      position: relative;
+    }
+
+    .university-header {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+   h1.university {
+  font-size: 22px;
+  font-weight: 700;
+  color: #002855;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+    }
+
+    .faculty-subtext {
+      font-size: 15px;
+      font-weight: bold;
+      color: #000;
+      margin: 5px 0 30px 0;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #d0e1f9;
+      margin: 0 auto 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #3366cc;
+      font-size: 14px;
+      border: 3px solid #3366cc;
+      transition: transform 0.4s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.1);
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 25px;
+      margin-bottom: 10px;
+      color: #004080;
+    }
+
+    p {
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .info {
+      background-color: #f1f5fb;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .info p {
+      margin: 5px 0;
+    }
+
+    .references {
+      padding-left: 20px;
+    }
+
+    .references li {
+      margin-bottom: 8px;
+    }
+
+    .bottom-buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .bottom-buttons button {
+      padding: 10px 16px;
+      background-color: #004080;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .bottom-buttons button:hover {
+      background-color: #003366;
+    }
+
+    .btn-bottom {
+      padding: 10px 16px;
+      background-color: #004080;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-bottom:hover {
+      background-color: #003366;
+    }
+
+    section {
+      padding: 10px 0;
+      margin-bottom: 5px;
+      transition: transform 0.5s ease, background-color 0.5s ease;
+    }
+
+    section.zoomed {
+      background-color: #f0f8ff;
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="top-header-bar"><span>TEACHING PHILOSOPHY</span></div>
+
+  <div class="main-section">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h3>📖 Sections</h3>
+      <a href="#introduction" onclick="zoomTo('introduction')">📘 Introduction</a>
+      <a href="#statement" onclick="zoomTo('statement')">📝 Statement</a>
+      <a href="#validity" onclick="zoomTo('validity')">✅ Validity</a>
+      <a href="#application" onclick="zoomTo('application')">💡 Application</a>
+      <a href="#effectiveness" onclick="zoomTo('effectiveness')">📊 Effectiveness</a>
+      <a href="#conclusion" onclick="zoomTo('conclusion')">🎓 Conclusion</a>
+      <a href="#references" onclick="zoomTo('references')">📚 References</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <div class="university-header">
+        <h1 class="university">Akenten Appiah-Menka University of Skills Training and Entrepreneurial Development, Kumasi</h1>
+        <div class="faculty-subtext">(Faculty of Applied Sciences and Mathematics Education)</div>
+      </div>
+
+      <div class="logo">
+        <img src="IMG-20220201-WA0040.jpg" alt="Profile Photo" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;" />
+      </div>
+
+      <div class="info">
+        <p><strong>Department:</strong> Information Technology Education</p>
+        <p><strong>Student Name:</strong> Elvis Kodie</p>
+        <p><strong>Index Number:</strong> 5211040499</p>
+        <p><strong>Programme:</strong> BSc Information Technology (Education)</p>
+        <p><strong>Course:</strong> Post Internship Seminar</p>
+        <p><strong>Course Code:</strong> GPD 471</p>
+        <p><strong>Level:</strong> 400E</p>
+        <p><strong>Supervisor:</strong> Mr. Raphael K. Dzakpasu</p>
+        <p><strong>Date:</strong> June 2025</p>
+      </div>
+
+      <!-- Sections -->
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <p>A teaching philosophy is a declaration that outlines an educator's core beliefs, values, instructional and learning strategies. It guides how lessons are delivered and helps foster student achievement. It is a cornerstone in the pursuit of effective learning. The term "philosophy" stems from the Greek words "philo" (love) and "sophia" (wisdom), forming "philosophia"—the love of wisdom.</p>
+      </section>
+
+      <section id="statement">
+        <h2>Statement of My Teaching Philosophy</h2>
+        <p>Student-centered learning is the foundation of my teaching philosophy, rooted in the educational philosophy of John Dewey (1859–1952). I concentrate on every student's unique needs, talents, and interests, adjusting to suit multiple learning styles. I am dedicated to education as a lifelong journey, and I strive to promote an environment of inclusiveness, curiosity, creativity, and critical thinking. Inclusivity is central to my practice, and all students feel valued within an inclusive and equitable classroom. I recognize the power of collective experiences, so I actively work with students, colleagues, and the broader community to foster an encouraging and stimulating learning environment.</p>
+      </section>
+
+      <section id="validity">
+        <h2>Validity of My Teaching Philosophy</h2>
+        <p>My practice is rooted in research and evidence-based strategies. A student-centered model has shown to increase engagement and achievement. By valuing lifelong learning and inclusivity, I aim to provide an enriching and equitable learning experience.</p>
+      </section>
+
+      <section id="application">
+        <h2>Application of My Teaching Philosophy</h2>
+        <p>I tailor instruction to student strengths, challenges, and preferences. My teaching includes active, reflective, and inclusive lessons that promote critical thinking and empathy. Collaboration with colleagues and the community enhances the learning experience for all students.</p>
+      </section>
+
+      <section id="effectiveness">
+        <h2>Effectiveness of My Teaching Philosophy</h2>
+        <p>Success will be measured by student participation, motivation, academic progress, and feedback. Improvement in test scores, engagement, and positive reflections will demonstrate the impact of my methods.</p>
+      </section>
+
+      <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>My teaching philosophy centers on building an inclusive, interactive, and student-focused learning environment. I aim to guide students toward their potential through respect, lifelong learning, and collaboration.</p>
+      </section>
+
+      <section id="references">
+        <h2>References</h2>
+        <ul class="references">
+          <li>Dewey, J. (1938). <em>Experience and Education</em>. Kappa Delta Pi.</li>
+          <li>Freire, P. (1970). <em>Pedagogy of the Oppressed</em>. Continuum.</li>
+          <li>Hooks, B. (1994). <em>Teaching to Transgress: Education as the Practice of Freedom</em>. Routledge.</li>
+        </ul>
+      </section>
+
+      <div class="bottom-buttons">
+        <button onclick="window.location.href='home.html'">← Back to Home</button>
+        <a href="TEACHING PHILOSOPHY by Elvis kodie.pdf" class="btn-bottom" download>Download PDF</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  function zoomTo(id) {
+    const allSections = document.querySelectorAll("section");
+    allSections.forEach(sec => sec.classList.remove("zoomed"));
+
+    const target = document.getElementById(id);
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    target.classList.add("zoomed");
+
+    setTimeout(() => {
+      target.classList.remove("zoomed");
+    }, 1000);
+  }
+</script>
+
+</body>
+</html>

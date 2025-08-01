@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elvis Kodie - Curriculum Vitae</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 30px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .header-left, .header-center, .header-right {
+      flex: 1;
+      min-width: 150px;
+    }
+
+    .header-center {
+      text-align: center;
+    }
+
+    .header-right {
+      text-align: right;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: 600;
+      transition: transform 0.3s ease;
+    }
+
+    header h1:hover {
+      transform: scale(1.1);
+    }
+
+    .download-btn {
+      padding: 10px 20px;
+      background-color: #ffffff;
+      color: #1e3a8a;
+      border: 2px solid #1e3a8a;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s, color 0.3s, transform 0.3s ease;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .download-btn:hover {
+      background-color: #ffffff;
+      color: #122768;
+      transform: scale(1.08);
+    }
+
+    .profile-pic-header {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 20%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-pic-header:hover {
+      transform: scale(1.08);
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-left: 240px; /* space for sidebar */
+    }
+
+    h2 {
+      color: #1e3a8a;
+      border-bottom: 2px solid #1e3a8a;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+
+    ul {
+      padding-left: 20px;
+      line-height: 2.2;
+    }
+
+    p {
+      line-height: 1.7;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 40px;
+      background-color: #1e3a8a;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background-color 0.3s;
+    }
+
+    .back-link:hover {
+      background-color: #122768;
+      text-decoration: underline;
+    }
+
+    @media print {
+      .back-link, .download-btn, .side-nav {
+        display: none;
+      }
+    }
+
+    /* Side Navigation */
+    .side-nav {
+      position: fixed;
+      top: 250px;
+      left: 5px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px 15px;
+      z-index: 999;
+      width: 180px;
+    }
+
+    .side-nav a {
+      display: block;
+      color: #1e3a8a;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 12px 0;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .side-nav a:hover {
+      color: #122768;
+      transform: scale(1.05);
+    }
+
+    /* Zoom effect */
+    .zoom-section {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .zoomed {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px rgba(30, 58, 138, 0.3);
+      z-index: 10;
+      position: relative;
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll(".side-nav a");
+      links.forEach(link => {
+        link.addEventListener("click", () => {
+          const targetId = link.getAttribute("href").substring(1);
+          const target = document.getElementById(targetId);
+          if (target) {
+            document.querySelectorAll(".zoomed").forEach(el => el.classList.remove("zoomed"));
+            target.classList.add("zoomed");
+            setTimeout(() => target.classList.remove("zoomed"), 2000);
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <a href="ELVIS CURRICULUM VITAE.pdf" class="download-btn" download>Download PDF</a>
+    </div>
+    <div class="header-center">
+      <h1>CURRICULUM VITAE</h1>
+    </div>
+    <div class="header-right">
+      <img src="photo_1_2025-07-28_14-32-58.jpg" alt="Elvis Kodie" class="profile-pic-header">
+    </div>
+  </header>
+
+  <!-- SIDE NAVIGATION -->
+  <div class="side-nav">
+    <a href="#personal-info">Personal Info</a>
+    <a href="#career-objective">Career Objective</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#seminars">Seminars</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#references">References</a>
+  </div>
+
+  <div class="container">
+    <h2 id="personal-info" class="zoom-section">Personal Information</h2>
+    <ul>
+      <li><strong>Name:</strong> Elvis Kodie</li>
+      <li><strong>Date of Birth:</strong> 2nd September, 2002</li>
+      <li><strong>Address:</strong> P. O. Box 8 Kumasi</li>
+      <li><strong>Email:</strong> kodieelvis63@gmail.com</li>
+      <li><strong>Phone Number:</strong> 0550019465 / 0534964102</li>
+      <li><strong>Nationality:</strong> Ghanaian</li>
+      <li><strong>Gender:</strong> Male</li>
+      <li><strong>Health:</strong> Good</li>
+      <li><strong>Criminal Records:</strong> None</li>
+      <li><strong>Languages:</strong> Twi and English</li>
+    </ul>
+
+    <h2 id="career-objective" class="zoom-section">Career Objective</h2>
+    <p>
+      A passionate and results-driven professional with three years of experience, committed to    
+      refining pedagogical skills and enhancing lesson delivery. Eager to create dynamic learning 
+      environments that inspire student engagement, foster intellectual growth, and contribute to the 
+      overall success of individuals through innovative teaching methodologies.
+    </p>
+
+    <h2 id="education" class="zoom-section">Educational Background</h2>
+    <ul>
+      <li><strong>Bachelors’ Degree in Information Technology Education</strong><br>
+        2022 - 2025: Akenten Appiah-Menka University of Skills, Training and Entrepreneurial Development.
+      </li>
+      <li><strong>West Africa Senior School Certificate Examination</strong><br>
+        2018 - 2021: Ejuraman Anglican Senior High School (EASHS)<br>
+        Visual Arts
+      </li>
+      <li><strong>Basic Education Certificate Examination</strong><br>
+        2004 - 2017: Abuakwa D/A Basic School<br>
+        BECE Certificate.
+      </li>
+    </ul>
+
+    <h2 id="experience" class="zoom-section">Work Experience</h2>
+    <ul>
+      <li><strong>Internship at Abuakwa D/A Junior High School ‘B’</strong>, January – April 2025<br>
+        I was responsible for facilitating in Computing at Abuakwa D/A Junior High School ‘B’
+      </li>
+      <li><strong>Teaching Practice at Suame M/A Junior High School</strong>, September – December 2020<br>
+        I was responsible for facilitating in Computing at Suame M/A Junior High School
+      </li>
+    </ul>
+
+    <h2 id="skills" class="zoom-section">Skills</h2>
+    <ul>
+      <li><strong>Programming & Tools:</strong> Python, Java, Dart (Flutter), HTML/CSS/JS</li>
+      <li><strong>Frameworks:</strong> Flutter</li>
+      <li><strong>Database:</strong> MySQL</li>
+      <li><strong>Studio Engineering</strong></li>
+      <li><strong>Technical Proficiency:</strong> Adobe Creative Cloud</li>
+    </ul>
+
+    <h2 id="seminars" class="zoom-section">Seminars Attended</h2>
+    <ul>
+      <li>Pre - Internship seminar at Aamusted 2024</li>
+      <li>Post Internship seminar at Aamusted 2025</li>
+    </ul>
+
+    <h2 id="hobbies" class="zoom-section">Hobbies and Interest</h2>
+    <ul>
+      <li>Teaching Computing</li>
+      <li>Music Production</li>
+      <li>Regular body exercise</li>
+    </ul>
+
+    <h2 id="references" class="zoom-section">References</h2>
+    <ul>
+      <li><strong>Mrs. Aku Darkey</strong><br>The Headmistress, Abuakwa D/A Basic School ‘B’<br>0244767895</li>
+      <li><strong>Mr. Kumi</strong><br>Teacher, Abuakwa D/A Basic School<br>0240672415</li>
+    </ul>
+
+    <a href="home.html" class="back-link">&larr; Back to Home</a>
+  </div>
+
+</body>
+</html>

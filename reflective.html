@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reflective Practice - Elvis Kodie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f2f6fc;
+      color: #333;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to right, #002f5f, #004080);
+      color: white;
+      padding: 20px 20px;
+      text-align: center;
+      font-size: 25px;
+      font-weight: bold;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .hover-grow {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .hover-grow:hover {
+      transform: scale(1.1);
+    }
+
+    aside {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 250px;
+      height: calc(100vh - 70px);
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      border-right: 1px solid #ddd;
+      padding: 30px 20px;
+      overflow-y: auto;
+    }
+
+    aside h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #002f5f;
+    }
+
+    aside a {
+      display: block;
+      text-decoration: none;
+      color: #002f5f;
+      padding: 10px;
+      margin-bottom: 8px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    aside a:hover {
+      background-color: #0078d4;
+      color: white;
+    }
+
+    main {
+      margin-left: 270px;
+      padding: 100px 40px 40px;
+    }
+
+    section {
+      background: white;
+      padding: 70px;
+      margin-bottom: 40px;
+      border-radius: 40px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    section:target {
+      transform: scale(1.02);
+      border-left: 6px solid #0078d4;
+    }
+
+    h1, h2, h3 {
+      color: #002f5f;
+    }
+
+    .title-block p {
+      margin: 6px 0;
+      font-weight: 500;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+    }
+
+    .btn-bottom {
+      background-color: #002f5f;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-bottom:hover {
+      background-color: #004080;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      padding: 20px;
+    }
+
+    #intro {
+      margin-top: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+      aside {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      aside a {
+        margin: 5px;
+      }
+
+      main {
+        margin: 0;
+        padding: 100px 20px 20px;
+      }
+
+      header {
+        font-size: 16px;
+      }
+
+      .button-row {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <span class="hover-grow">REFLECTIVE TEACHING PRACTICE</span>
+  </header>
+
+  <aside>
+    <h2>Navigation</h2>
+    <a href="#intro">University Details</a>
+    <a href="#reflective">Reflective Practice</a>
+    <a href="#lesson">Lesson Coverage</a>
+    <a href="#activities">Teacher-Learner Activities</a>
+    <a href="#strength">Strength</a>
+    <a href="#challenges">Challenges</a>
+    <a href="#differently">What I'd Do Differently</a>
+    <a href="#innovation">Innovative Measures</a>
+    <a href="#insight">Insight Gained</a>
+  </aside>
+
+  <main>
+    <section id="intro">
+      <div class="title-block">
+        <p><strong>Faculty:</strong> Applied Sciences and Mathematics Education</p>
+        <p><strong>Department:</strong> Information Technology Education</p>
+        <p><strong>Name:</strong> Elvis Kodie</p>
+        <p><strong>Index Number:</strong> 5211040499</p>
+        <p><strong>Programme:</strong> BSc. Information Technology Education</p>
+        <p><strong>Course Title:</strong> Post Internship Seminar</p>
+        <p><strong>Course Code:</strong> GPD 471</p>
+        <p><strong>Level:</strong> 400 E</p>
+        <p><strong>Supervisor:</strong> Dr. Raphael K. Dzapazu</p>
+      </div>
+    </section>
+
+    <section id="reflective">
+      <h2>Reflective Practice</h2>
+      <p>Reflective practice is about taking a step back to think honestly about what you did, how you felt, and what you learned from an experience. It’s a way to make sense of your actions and decisions so you can grow, improve, and handle similar situations better in the future.</p>
+      <p>During my internship at ABUAKWA M/A J.H.S "B", where I taught Computing in B.S.7, I consistently reflected on nearly every lesson I delivered. However, this account specifically focuses on a lesson I taught on February 17th, 2025.</p>
+    </section>
+
+    <section id="lesson">
+      <h2>Lesson Coverage</h2>
+      <ul>
+        <li><strong>Name of School:</strong> Abuakwa M/A J.H.S ‘B’</li>
+        <li><strong>Subject:</strong> Computing</li>
+        <li><strong>Strand:</strong> Communication Networks</li>
+        <li><strong>Sub Strand:</strong> Internet and Social Media</li>
+        <li><strong>Class:</strong> B.S.7</li>
+        <li><strong>Class Size:</strong> 51</li>
+        <li><strong>Date:</strong> 17th February, 2025</li>
+        <li><strong>Lesson Duration:</strong> 86 minutes</li>
+      </ul>
+      <p><strong>Instructional Objectives:</strong></p>
+      <ol>
+        <li>Learners will be able to define the Internet and Social Media.</li>
+        <li>Describe at least three (3) uses of social media sites.</li>
+      </ol>
+      <p><strong>Reference:</strong> Mantey, E.H. (2023). Computing Basic 7-9. Archivers Publications. (P.153)</p>
+    </section>
+
+    <section id="activities">
+      <h2>Teacher–Learner Activities</h2>
+      <p><strong>Teaching and Learning Materials:</strong> Computer, Projector, Textbook, Pictures and videos of social media sites.</p>
+      <p><strong>Relevant Previous Knowledge (R.P.K):</strong> Used questions and answers to review learners’ previous knowledge.</p>
+      <p><strong>Mode of Delivery:</strong> Demonstration and Guided practice.</p>
+      <h3>Introduction</h3>
+      <p>I quickly reviewed students’ prior knowledge using a short test. Then I introduced the new topic and shared the performance indicators.</p>
+      <h3>Development of the Lesson</h3>
+      <ul>
+        <li><strong>Activity 1:</strong> Guided learners on how to connect to the internet and use web browsers (Google Chrome, Mozilla Firefox) to search information safely.</li>
+        <li><strong>Activity 2:</strong> Introduced social media platforms like Facebook, WhatsApp, Instagram; discussed their uses, and examined their impact.</li>
+      </ul>
+      <h3>Closure</h3>
+      <p>Summarized the lesson. Students asked questions and received an assignment on social media advantages/disadvantages.</p>
+    </section>
+
+    <section id="strength">
+      <h2>Strength</h2>
+      <p>The learning objectives were successfully achieved. Strong subject knowledge helped maintain students' interest. Active participation and engagement during hands-on activities were notable.</p>
+    </section>
+
+    <section id="challenges">
+      <h2>Challenges</h2>
+      <ul>
+        <li>Some students couldn’t differentiate between web browsers and social media platforms.</li>
+        <li>Misconceptions about online safety and privacy.</li>
+        <li>Limited time affected lesson depth.</li>
+      </ul>
+      <p>This showed me I needed to balance explanation with individual understanding checks.</p>
+    </section>
+
+    <section id="differently">
+      <h2>What I Would Do Differently Next Time</h2>
+      <ul>
+        <li>Encourage more student questions and practice.</li>
+        <li>Plan better to fit time allocation.</li>
+        <li>Use more visual and hands-on materials.</li>
+      </ul>
+    </section>
+
+    <section id="innovation">
+      <h2>Innovative Measures</h2>
+      <p>I consulted my mentor who guided me with strategies to support learners struggling with Computing. This taught me to be flexible and to reinforce foundational computing skills before tackling complex topics.</p>
+    </section>
+
+    <section id="insight">
+      <h2>Insight Gained</h2>
+      <ul>
+        <li>Interactive methods keep learners engaged.</li>
+        <li>Strong subject knowledge boosts teacher confidence and student focus.</li>
+        <li>Guided discovery helps students learn better than direct instruction alone.</li>
+      </ul>
+    </section>
+
+    <!-- Button Row -->
+    <div class="button-row">
+      <a href="home.html" class="btn-bottom">⬅ Back to Home</a>
+      <a href="REFLECTIVE by Elvis kodie.pdf" class="btn-bottom" download>Download PDF</a>
+    </div>
+
+  </main>
+</body>
+</html>
